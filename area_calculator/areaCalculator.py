@@ -1,8 +1,23 @@
 def calcular_area_quadrado(base):
-    return base*base
+    try:
+        if base < 0:
+            raise ValueError('Valores negativos não são permitidos.')
+        return base * base
+    except ValueError as e:
+        return f"Erro: {e}"
 
 def calcular_area_retangulo(base, altura):
-    return base * altura
+    try:
+        if base < 0 or altura < 0:
+            raise ValueError('Valores negativos não são permitidos.')
+        return base * altura
+    except ValueError as e:
+        return f"Erro: {e}"
 
 def calcular_area_triangulo(base, altura):
-    return (base*altura)/2
+    try:
+        if base < 0 or altura < 0:
+            raise ValueError('Valores negativos não são permitidos.')
+        return (base * altura) / 2
+    except ValueError as e:
+        return f"Erro: {e}"
