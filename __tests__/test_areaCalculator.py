@@ -38,3 +38,18 @@ def testar_calcular_area_triangulo_negativo():
     resultado_obtido = calcular_area_triangulo(base, altura)
 
     assert resultado_esperado == resultado_obtido
+
+@pytest.mark.parametrize('base, resultado_esperado',
+                        [
+                            (3, 9),
+                            (0, 0),
+                            (4.2, 17.64),
+                            (-2, "Erro: Valores negativos não são permitidos.")
+                        ] 
+                        )
+
+def testar_calcular_area_quadrado_lista(base, resultado_esperado):
+
+    resultado_obtido = calcular_area_quadrado(base)
+
+    assert resultado_esperado == resultado_obtido
