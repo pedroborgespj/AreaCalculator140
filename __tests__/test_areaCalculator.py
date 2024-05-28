@@ -30,3 +30,11 @@ def testar_calcular_area_triangulo():
 
     assert resultado_esperado == resultado_obtido
 
+def testar_calcular_area_triangulo_negativo():
+    base = -6
+    altura = 8
+    resultado_esperado = "Erro: Valores negativos não são permitidos."
+
+    resultado_obtido = calcular_area_triangulo(base, altura)
+
+    assert resultado_esperado == resultado_obtido
